@@ -1,5 +1,3 @@
-# Martin's Makefile
-
 CC = gcc
 CFLAGS = -pedantic-errors
 LDFLAGS = 
@@ -10,9 +8,16 @@ LEX_FILE = *.lex
 LEX_OUTPUT = lex.yy.c
 EXECUTABLE = main.exe
 
+EXAMPLES_DIR = exemplos
+TOKENS_DIR = tokens
+
+# Lista de arquivos de entrada dinâmica
+EXAMPLE_FILES = $(wildcard $(EXAMPLES_DIR)/*.in)
+TOKEN_FILES = $(patsubst $(EXAMPLES_DIR)/%.in, $(TOKENS_DIR)/%.out, $(EXAMPLE_FILES))
+
 all: $(EXECUTABLE)
-	./$(EXECUTABLE) < programas/fatorial.in > parser/fatorial.out
-	./$(EXECUTABLE) < programas/lista.in > parser/lista.out
+	$(foreach token_file, $(TOKEN_FILES), ./$(EXECUTABLE) < $(patsubst $(TOKENS_DIR)/%.out, $(EXAMPLES_DIR)/%.in, $(token_file)) > $(token_file);)
+
 $(EXECUTABLE): $(OBJECTS) $(LEX_OUTPUT)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
@@ -26,7 +31,7 @@ clean:
 	rm -f *.o
 
 cleanall: clean
-	rm -f $(EXECUTABLE) $(LEX_OUTPUT) parser/fatorial.out parser/lista.out main.exe lex.yy.c
+	rm -f $(EXECUTABLE) $(LEX_OUTPUT) $(TOKEN_FILES) main.exe lex.yy.c
 
 run: $(EXECUTABLE)
 	./$(EXECUTABLE)

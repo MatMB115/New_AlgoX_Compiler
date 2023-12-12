@@ -11,7 +11,7 @@ INICIO
     FIM_SE
     ENQUANTO argumento .M. 1
         fatorial := fatorial * argumento
-        argumento := argumento – 1
+        argumento := argumento - 1
     FIM_ENQUANTO
     ESCREVA 'fatorial = ', fatorial
 FIM

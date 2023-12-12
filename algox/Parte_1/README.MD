@@ -3,7 +3,7 @@ Conforme as diretrizes propostas para execução do projeto 1, esse trabalho é 
 
  - [x] Análise Léxica - implemente um analisador léxico para a linguagem Algox utilizando flex;
  - [x] Construção da Gramática | Árvore Sintática - projete uma estrutura de árvore sintática para Algox apropriada para a geração por um analisador sintático;
- - [x] Implemente um analisador sintático descendente para Algox;
+ - [ ] Implemente um analisador sintático descendente para Algox;
 
 ## Análise Léxica
 Para desenvolver o analisador léxico utilizou-se:
@@ -13,10 +13,9 @@ Para desenvolver o analisador léxico utilizou-se:
     GCC 13.2.1
     IDE VSCode
 
-Os Programas fornecidos pelo documento do projeto estão na pasta [programas](/algox/programas/), os arquivos .in são processados pelo analisador léxico e resultam nos arquivo de saída .out com os tokens na pasta [parser](/parser/). Os arquivos .out possuem a sequência de tokens necessários para a execução da próxima etapa.
+Os programas exemplo fornecidos pelo documento do projeto estão na pasta [exemplos](/algox/Parte_1/exemplos/), os arquivos .in são processados pelo analisador léxico e resultam nos arquivo de saída .out com os tokens na pasta [tokens](/algox/Parte_1/tokens/). Os arquivos .out possuem a sequência de tokens necessários para a execução da próxima etapa.
 
 Os processos de compilação e execução foram automatizados utilizando um makefile. Todavia, é possível realizar a compilação do Flex e do programa em C pelo GCC via terminal.
-
 
 ## Construção da Gramática | Árvore Sintática
 ### Gramática desenvolvida para a linguagem Algox
@@ -67,11 +66,12 @@ Os processos de compilação e execução foram automatizados utilizando um make
     FIM_ENQUANTO → "FIM_ENQUANTO"
     LETRA → a-zA-Z
     DIGITO → 0-9
+
 ### Árvore sintática obtida
-![árvore](/arvore.jpg)
+![árvore](/algox/Parte_1/arvore.png)
 
 ## Analisador Sintático Descendente
-O analisador sintático foi implementado em C e está presente na pasta [parser](/parser/), junto com os tokens no arquivo de saída.
+O analisador sintático foi implementado em C.
 
 ## Instruções para execução
 
