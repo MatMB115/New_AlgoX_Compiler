@@ -26,7 +26,7 @@ clean:
 	rm -f *.o
 
 cleanall: clean
-	rm -f $(EXECUTABLE) $(LEX_OUTPUT) parser/fatorial.out parser/lista.out
+	rm -f $(EXECUTABLE) $(LEX_OUTPUT) parser/fatorial.out parser/lista.out main.exe lex.yy.c
 
 run: $(EXECUTABLE)
 	./$(EXECUTABLE)
