@@ -2,8 +2,7 @@
   //Matheus Martins Batista - 2019005687 - Compiladores 2023/2
   #include <stdio.h>
   #include "parser.tab.h"
-  int yywrap() { return 1; }
-  void yyerror(const char *str) { fprintf(stderr, "error: %s\n", str); }
+  int yywrap(void) { return 1; }
 %}
 
 ABRE                     "("
@@ -48,11 +47,11 @@ WHITESPACES              ([ \t\n\r]+)
 
 %%
 
-{ABRE}                     { return ABRE; }
+{ABRE}                     { return ABRE_PAR; }
 {ENQUANTO}                 { return ENQUANTO; }
 {ENTAO}                    { return ENTAO; }
 {ESCREVA}                  { return ESCREVA; }
-{FECHA}                    { return FECHA; }
+{FECHA}                    { return FECHA_PAR; }
 {FIM_ENQUANTO}             { return FIM_ENQUANTO; }
 {FIM_SE}                   { return FIM_SE; }
 {FIM}                      { return FIM; }
