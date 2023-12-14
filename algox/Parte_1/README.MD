@@ -3,7 +3,7 @@ Conforme as diretrizes propostas para execução do projeto 1, esse trabalho é 
 
  - [x] Análise Léxica - implemente um analisador léxico para a linguagem Algox utilizando flex;
  - [x] Construção da Gramática | Árvore Sintática - projete uma estrutura de árvore sintática para Algox apropriada para a geração por um analisador sintático;
- - [ ] Implemente um analisador sintático descendente para Algox;
+ - [x] Implemente um analisador sintático descendente para Algox;
 
 ## Análise Léxica
 Para desenvolver o analisador léxico utilizou-se:
