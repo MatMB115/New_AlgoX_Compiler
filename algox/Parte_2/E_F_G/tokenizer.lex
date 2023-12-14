@@ -88,9 +88,9 @@ NEWLINE                  (\r\n|\n|\r)
 {VIRGULA}                  { return VIRGULA; }
 {CONSTANTE_INTEIRA}        { return CONSTANTE_INTEIRA; }
 {CONSTANTE_REAL}           { return CONSTANTE_REAL; }
-{VARIAVEL}                 { insert(yytext, strlen(yytext), indefinido, lineno);
+{VARIAVEL}                 { insert(yytext, strlen(yytext), currentType, lineno);
                               return VARIAVEL; }
-{VARIAVEL_LISTA}           { insert(yytext, strlen(yytext), indefinido, lineno);
+{VARIAVEL_LISTA}           { insert(yytext, strlen(yytext), currentType, lineno);
                               return VARIAVEL_LISTA; }
 {CADEIA}                   { return CADEIA; }
 {COMENTARIO}               // Pula os trechos comentados

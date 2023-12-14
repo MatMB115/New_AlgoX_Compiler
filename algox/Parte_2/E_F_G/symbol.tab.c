@@ -42,7 +42,7 @@ void insert(char *name, int len, int type, int lineno){
 		strncpy(l->st_name, name, len);  
 		/* add to hashtable */
 		l->st_type = type;
-		l->inf_type = type;
+		if (lineno == 1) l->st_type = -1;
 		l->scope = cur_scope;
 		l->lines = (RefList*) malloc(sizeof(RefList));
 		l->lines->lineno = lineno;
@@ -119,6 +119,7 @@ void symtab_dump(FILE * of){
 				fprintf(of,"vetor de ");
 				fprintf(of,"%-9s","real");
 			}
+			else if (l->st_type == PROGRAM_NAME) fprintf(of,"%-18s","string_pname");
 			else fprintf(of,"%-18s","indefinido"); // if indefinido or 0
 			while (t != NULL){
 				fprintf(of,"%4d ",t->lineno);

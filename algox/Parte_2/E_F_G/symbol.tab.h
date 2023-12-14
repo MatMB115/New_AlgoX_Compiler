@@ -6,6 +6,7 @@
 
 /* token types */
 #define indefinido 0
+#define PROGRAM_NAME -1
 #define INT_TYPE 1
 #define REAL_TYPE 2
 #define STR_TYPE 3

@@ -68,8 +68,8 @@ INIT: 		ALGOX {printf("\nSintaxe correta!\n");}
 ALGOX      : PROGRAMA VARIAVEL INICIO  DECLARACOES ALGORITMO FIM
 ;
 
-DECLARACOES:  TIPO_UNICO VARIAVEL DECLARACOES_REC DECLARACOES //{ insert(yytext, strlen(yytext), $1, lineno); }
-			| TIPO_LISTA VARIAVEL_LISTA DECLARACOES_LISTA_REC DECLARACOES //{ insert(yytext, strlen(yytext), $1, lineno); }
+DECLARACOES:  TIPO_UNICO VARIAVEL DECLARACOES_REC DECLARACOES 
+			| TIPO_LISTA VARIAVEL_LISTA DECLARACOES_LISTA_REC DECLARACOES 
 			| 
 ;
 
@@ -81,14 +81,14 @@ DECLARACOES_LISTA_REC: 	VIRGULA VARIAVEL_LISTA DECLARACOES_LISTA_REC
 						|
 ;
 
-TIPO_UNICO:   TIPO_INTEIRO { $$ = 1; }
-			| TIPO_REAL { $$ = 2; }
-			| TIPO_CARACTER { $$ = 3; }
-			| TIPO_CADEIA { $$ = 3; }
+TIPO_UNICO:   TIPO_INTEIRO { currentType = 1; }
+			| TIPO_REAL { currentType = 2; }
+			| TIPO_CARACTER { currentType = 3; }
+			| TIPO_CADEIA { currentType = 3; }
 ;
 
-TIPO_LISTA:   TIPO_LISTA_INT { $$ = 51; }
-			| TIPO_LISTA_REAL { $$ = 52; }
+TIPO_LISTA:   TIPO_LISTA_INT { currentType = 51; }
+			| TIPO_LISTA_REAL { currentType = 52; }
 ;
 
 ALGORITMO:    LER
