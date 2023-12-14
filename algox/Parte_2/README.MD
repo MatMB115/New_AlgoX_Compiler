@@ -17,7 +17,7 @@ O objetivo desse trabalho é a construção do analisador léxico e sintático p
       |     |   | ---parser.y (Arquivo do analizador semântico + sintático)
       |     |   | ---symbol.tab.c (Arquivo da tabela de sibolos)
       |     |   | ---symbol.tab.h (Cabeçalho das funções do arquivo .C )
-      |     |   | ---tokenizer.lex (Arquivo Lex do analisador semântico + sintático)
+      |     |   | ---tokenizer.lex (Arquivo Lex do analisador léxico + semântico + sintático)
       |     |
       |     |---[exemplos]
       |     |   | ---fatorial.in
@@ -80,7 +80,7 @@ Implementação com Yacc/Bison do analisador sintático ascendente está present
 
 ```bash
 
-# Na raiz do projeto execute o make para compilar o FLEX, Bison/Yacc e o programa com GCC
+# Na pasta algox/D/ do projeto execute o make para compilar o FLEX, Bison/Yacc e o programa com GCC
 
 $ make
 
@@ -99,11 +99,11 @@ $ make clean
 ```
 
 ## Item E) - F) - G)
-Implementação do analisador semântido + tabela de símbolos está presente na pasta [E_&_F](/algox/Parte_2/E_F_G). Para executar, deve-se seguir as instruções abaixo:
+Implementação do analisador semântido + tabela de símbolos está presente na pasta [E_F_G](/algox/Parte_2/E_F_G). Para executar, deve-se seguir as instruções abaixo:
 
 ```bash
 
-# Na raiz do projeto execute o make para compilar o FLEX, Bison/Yacc, a tabela de simbolos e o programa com GCC
+# Na algox/E_F_G/ do projeto execute o make para compilar o FLEX, Bison/Yacc, a tabela de simbolos e o programa com GCC
 
 $ make
 
