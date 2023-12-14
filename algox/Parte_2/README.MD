@@ -1,7 +1,7 @@
 # ALGOX - Análise Léxica e Sintática Ascendente
 
 ## Construção da Gramática
-     De acordo com o Trabalho proposto, deve-se estruturar  a gramática referente a linguagem ALGOX para a realização dos itens D, E, F e G. A gramática desenvolvida para AlgoX está presente no seção abaixo:
+De acordo com o Trabalho proposto, deve-se estruturar  a gramática referente a linguagem ALGOX para a realização dos itens D, E, F e G. A gramática desenvolvida para AlgoX está presente no seção abaixo:
 ### Gramática AlgoX
     ALGOX → PROGRAMA VARIAVEL INICIO DECLARACOES ALGORITMO FIM
 
