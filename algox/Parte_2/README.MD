@@ -1,5 +1,31 @@
 # ALGOX - Análise Léxica e Sintática Ascendente
-
+## Introdução
+Esse trabalho foi desenvolvido pelos alunos para a matéria de Compiladores no  segundo semestre de 2023 na Universidade Federal de Itajubá.
+O objetivo desse trabalho é a construção do analisador léxico e sintático para a linguagem Algox, uma linguagem de algoritmo hipotética, que será utilizada como exemplona demonstração dos conceitos envolvidos na introdução a compiladores.
+### Organização dos arquivos.
+    LICENSE
+    CIC220_ProjetoAnalise_Algox_II
+    [algox]
+      |---[Parte_2]
+      |     |---[D]
+      |     |   | ---Makefile (Automatiza a compilação do programa)
+      |     |   | ---parser.y (Arquivo do analizador sintático)
+      |     |   | ---tokenizer.lex (Arquivo Lex do analisador sintático)
+      |     |
+      |     |---[E_F_G] (front-end do compilador)
+      |     |   | ---Makefile (Automatiza a compilação do programa)
+      |     |   | ---parser.y (Arquivo do analizador semântico + sintático)
+      |     |   | ---symbol.tab.c (Arquivo da tabela de sibolos)
+      |     |   | ---symbol.tab.h (Cabeçalho das funções do arquivo .C )
+      |     |   | ---tokenizer.lex (Arquivo Lex do analisador semântico + sintático)
+      |     |
+      |     |---[exemplos]
+      |     |   | ---fatorial.in
+      |     |   | ---lista.in
+      |
+      |     |---README.MD
+   
+      
 ## Construção da Gramática
 De acordo com o Trabalho proposto, deve-se estruturar  a gramática referente a linguagem ALGOX para a realização dos itens D, E, F e G. A gramática desenvolvida para AlgoX está presente no seção abaixo:
 ### Gramática AlgoX
